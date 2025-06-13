@@ -1,0 +1,123 @@
+body {
+  background-image: url("../../assets/images/m.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  
+}
+
+
+
+.container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-left: 47%;
+  padding: 40px;
+  text-align: left;
+  font-size: 19px;
+  line-height: 1.8;
+  /* Removed background color and border-radius */
+}
+
+blockquote {
+  font-style: italic;
+  color: #251446;
+  border-left: 4px solid #697fb9;
+  padding-left: 12px;
+  margin-left: 0;
+}
+
+.final {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #535555;
+  border-left: 5px solid #587e71;
+  padding-left: 12px;
+  margin-top: 20px;
+}
+
+.chapter-btn {
+  display: inline-block;
+  margin-left: 55px; /* ✅ moves slightly to the right */
+  padding: 12px 20px;
+  background-color: #101b5a;
+  color: white;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px #2c1b17;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.chapter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px #6884b8; /* deeper 3D effect on hover */
+  background-color: #6a7bc7; /* slightly lighter dark chocolate on hover */
+}
+
+
+
+
+#bg-video {
+  display: none; /* hide by default (desktop) */
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 768px) {
+  body {
+    background: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  #bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  h1{
+    font-size: 30px;
+text-decoration: underline;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6); /* optional background for readability */
+    position: relative;
+    z-index: 1;
+  }
+
+
+ .chapter-buttons {
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.chapter-btn {
+  width: 45%;
+  padding: 12px 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+}

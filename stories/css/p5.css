@@ -1,0 +1,144 @@
+/* General Styling */
+body {
+  font-family: Georgia, serif;
+    padding-top: 10px; /* Optional spacing */
+  
+  background-image: url('../../assets/images/v3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+h1 {
+  font-size: 35px;
+  color: #000000;
+  font-weight: bold;
+}
+
+
+
+.nav-button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background: rgba(255, 140, 0, 0.6);
+}
+
+
+.content {
+  margin-left: 40px;
+  padding: 30px;
+  max-width: 800px;
+  margin-top: 0; 
+}
+
+blockquote {
+  border-left: 4px solid #c0a080;
+  margin: 20px 0;
+  padding-left: 20px;
+  font-style: italic;
+  color: #555;
+  background-color: #fff7f0;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(3, 27, 54, 0.4);
+  color: #0f0f0f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 140, 0, 0.6);
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 6px 6px 15px #cba579, -6px -6px 15px #fff2e1;
+}
+
+
+
+
+#bg-video{
+  display: none; /* Hide video on desktop */
+}
+
+/* MOBILE RESPONSIVE VIDEO BACKGROUND */
+@media screen and (max-width: 768px) {
+  body {
+    background: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  #bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .content {
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    background-color: rgba(233, 217, 217, 0.7);
+  }
+
+  .button-container {
+    bottom: 20px;
+    left: 0;
+    width: 90%;
+    justify-content: space-between;
+    padding: 0 20px;
+       position: static; /* Not fixed anymore */
+    margin-top: 30px; /* Space above the buttons */
+  }
+
+  .btn {
+    background-color: #da7878;
+  }
+
+  h1 {
+  font-size: 35px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+}
+
+
+
+

@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  color: #000000;
+  background-image: url(../../assets/images/jackie.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  line-height: 1.5;
+  font-size: 16px; /* Base size increased */
+
+}
+
+.container {
+  max-width: 640px;
+  border-radius: 12px;
+  padding: 30px 25px;
+  line-height: 1.8;
+  margin: 40px 0 40px 40px; /* Top Right Bottom Left */
+}
+
+h1 {
+  text-align: left;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1c4780;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 18px;
+  font-size: 1.15em;
+  text-align: left;
+  line-height: 1.9;
+  word-spacing: 3px;
+}
+
+.quote, .final-quote {
+  font-weight: bold;
+  color: #6e4c3e;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.final-quote {
+  font-size: 1.2em;
+  color: #4b2e23;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 30px;  /* Slightly lifted for less height */
+  right: 40px;   /* Tighter to edge */
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(3, 27, 54, 0.4);
+  color: #0f0f0f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: rgba(255, 140, 0, 0.6);
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 6px 6px 15px #cba579, -6px -6px 15px #fff2e1;
+}
+
+/* 🖥️ HIDE VIDEO ON DESKTOP */
+#bg-video{
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background: none; /* Remove background image */
+    font-family: Georgia, serif;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    display: block;
+    opacity: 0.4; /* Optional transparency */
+  }
+
+  .container {
+    padding: 20px;
+    margin: 0;
+  }
+
+  .button-container {
+    margin: 30px 10px 0 10px;
+    display: flex;
+   top: 30%;
+    position: relative;
+    right: 10%;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+  }
+
+  h1 {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #1c4780;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+}
