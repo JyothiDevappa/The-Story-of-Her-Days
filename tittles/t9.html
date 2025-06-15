@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Now I Know How It Feels</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    body {
+background-image: url('../assets/images/uncle.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 5%;
+    }
+
+    .mobile-video {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      max-width: 600px;
+      background: rgba(255,255,255,0.2);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid #aaa;
+      padding-left: 16px;
+      margin: 30px 0;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2), 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+    }
+
+    .yellow-btn {
+      background-color: #FFD700;
+      color: #333;
+    }
+
+    .blue-btn {
+      background-color: #3b5998;
+      color: white;
+    }
+
+    /* Icon Bar */
+    .icon-bar {
+      position: fixed;
+      left: 20px;
+      top: 20px;
+      z-index: 1000;
+    }
+
+    .icon-bar a {
+      text-decoration: none;
+      font-size: 24px;
+      margin-left: 15px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .icon-bar a:hover {
+      color: #0a3f85;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      body {
+        background: none;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .mobile-video {
+        display: block;
+      }
+
+      .content {
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        backdrop-filter: none;
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 35px;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      blockquote {
+        font-size: 1rem;
+        border: none;
+        padding: 0 10px;
+        margin: 0;
+        color: #f8f8f8;
+      }
+
+      .buttons {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 10;
+      }
+
+      button {
+        width: 40%;
+        padding: 12px 0;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <video class="mobile-video" autoplay muted loop playsinline>
+<source src="../assets/vedios/k.mp4" type="video/mp4">
+  </video>
+
+  <div class="icon-bar">
+    <a href="../index.html" title="Home"><i class="fas fa-home"></i></a>
+    <a href="../storylist.html" title="Playlist"><i class="fas fa-music"></i></a>
+  </div>
+
+  <div class="content">
+    <h1>Now I Know How It Feels</h1>
+    <blockquote>“Sometimes we don’t listen because we’re not ready. Not because it wasn’t true.”</blockquote>
+
+    <div class="buttons">
+      <button class="yellow-btn" onclick="location.href='../stories/p8.html'">← Go Back</button>
+      <button class="blue-btn" onclick="location.href='../stories/p9.html'">Go Next? →</button>
+    </div>
+  </div>
+
+</body>
+</html>

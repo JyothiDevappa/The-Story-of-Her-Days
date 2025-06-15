@@ -1,0 +1,164 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-image: url(../../assets/images/sunflower.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.glass-box {
+  position: absolute;
+  top: 51%;
+  right: 25%;
+  transform: translateY(-50%);
+  width: 35vw;
+  max-width: 460px;
+  padding: 25px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50%);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(255, 255, 255, 0.1),
+              inset 0 0 15px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: -16px;
+  position: relative;
+  top: -9px;
+  color: rgb(19, 18, 19);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.morning-btn {
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #420b49;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 4rem;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+.morning {
+  color: rgb(14, 13, 13);
+}
+
+.vibes {
+  color: #14990a;
+}
+
+.icon-bar {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.icon-bar a {
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.icon-bar a:hover {
+  color: #ff4081;
+}
+
+.mobile-bg-video {
+  display: none;
+}
+
+.responsive-buttons {
+  display: none;
+}
+
+.mobile-only-text {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+
+  .mobile-bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .glass-box {
+    display: none;
+  }
+
+  .mobile-only-text {
+  display: block;
+  text-align: center;
+  margin-top: 100px; /* increase from 60px */
+}
+
+.mobile-only-text h1 {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 12px; /* small space after heading */
+}
+
+.mobile-only-text .quote {
+  font-size: 1.2rem;
+  margin-top: 0; /* remove extra gap */
+  color: rgb(255, 255, 255);
+}
+
+.responsive-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* reduced gap */
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  padding: 0 10px;
+  z-index: 1000;
+}
+
+  .responsive-buttons .morning-btn {
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 12px;
+    background-color: #f6f7f6;
+  }
+}

@@ -1,0 +1,148 @@
+body {
+  background-image: url('../../assets/images/u.png');
+  background-size: cover;         
+  background-repeat: no-repeat;   
+  background-position: center;    
+  height: 100vh;                  
+  margin: 0;     
+  padding-left: 20vw;
+  display: flex;
+}
+
+h1 {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 7em;
+  margin-top: 190px;
+  color: #660a61;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+.btn {
+  font-family: 'Georgia', serif;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent */
+  color: #fff3e0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(8px); /* adds the blur behind */
+  -webkit-backdrop-filter: blur(8px); /* for Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* optional soft border */
+}
+
+
+.btn:hover {
+  background-color: #5b8ea0;
+}
+
+.quote {
+  font-size: 1.4em;
+  color: #5c4d3d;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: -30px;      /* Moves the quote upward */
+  margin-left: -10px;
+  margin-right: 0;
+}
+
+.icon-bar {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.icon-bar a {
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 15px;
+  color: #0a0a0a;
+  transition: color 0.3s ease;
+}
+
+.icon-bar a:hover {
+  color: #9fb2cc;
+}
+
+/* Default: Hide video on large screens */
+#bg-video {
+  display: none;
+}
+
+/* Show video background only on mobile */
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 4.5em;
+    margin-top: 100px;
+  }
+
+  .quote {
+    font-size: 18px;
+    width: 70%;
+    position: relative;
+    right: -15%;
+    color: #d4dde9;
+    line-height: 2;
+  }
+
+  .button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 90%;
+    z-index: 100;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+    width: auto;
+        background-color: #0a0a0a;
+
+  }
+
+  .icon-bar {
+    top: 10px;
+    left: 10px;
+  }
+
+  .icon-bar a {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #aaa08f;
+  }
+}

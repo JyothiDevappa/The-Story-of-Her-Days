@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+background: url("assets/images/Purple.png") no-repeat center center;
+
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 700px;
+  margin-top: -15%;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  color: #4b3b5c;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.by {
+  font-style: italic;
+  font-size: 20px;
+  color: #5e4b6a;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 14px 32px;
+  background: linear-gradient(to bottom, #b185db, #845ec2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px #5c3c94;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #a16de0, #6c4bb3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px #4e2c69;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.icon-bar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.icon-bar a {
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.icon-bar a:hover {
+  color: #ff4081;
+}
+
+
+
+@media (max-width: 480px) {
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+  }
+
+  .login-container {
+    width: 90%;
+    max-width: 360px;
+    margin-top: -40%; /* Move text upward */
+  }
+
+  h1 {
+    font-size: 36px;
+    padding-bottom: 10px;
+  }
+
+  .by {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+ button {
+  font-size: 17px;
+  padding: 12px 28px;
+}
+
+
+  .icon-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .icon-bar a {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background: url('../../assets/images/NothingsNew.png') no-repeat right center;
+  background-size: cover; /* make sure it covers whole screen */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #2e1d13;
+}
+
+.main-container {
+  margin-left: 50%;
+  max-width: 700px;
+}
+
+h1 {
+
+  font-family: 'Lavishly Yours', cursive;
+  text-decoration: underline;
+
+  font-size: 64px;
+  margin-bottom: 40px;
+  color: #3b2c2f;
+
+}
+
+.quote {
+  font-size: 26px; /* Increased quote size */
+  color: #3b2c2f;
+  margin-top: 10px;
+  font-style: italic;
+  margin-left: -80px; /* Moves the quote to the left */
+}
+
+.button-container {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+.btn {
+  padding: 8px 20px 10px 9px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #5f7e9b, #4a6a85); /* muted blue-gray gradient */
+  color: #f0f4f8;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(100, 120, 140, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #3e5a70, #375063);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(80, 100, 120, 0.5);
+}
+
+/* Icon Bar Fixed to Left */
+.icon-bar {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.icon-bar a {
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.icon-bar a:hover {
+  color: #a4a7c5;
+}
+
+
+/* Default: Hide video on large screens */
+#bg-video {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  body {
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+  }
+
+  #bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .main-container {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transform: scale(calc(100vw / 430));
+    transform-origin: top center;
+    /* ADD THIS LINE */
+    max-width: 430px;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-top: 100px;
+    position: relative;
+    left: 0px;
+    color: #086915;
+  }
+
+ .quote {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 70%;
+  text-align: left;
+  margin: 0;
+}
+
+  .button-container {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 80%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn {
+    width: 40%;
+    height: 30%;
+    background: rgb(236, 231, 227);
+    color: #080808;
+  }
+
+  .icon-bar a {
+    font-size: 24px;
+    margin-left: 15px;
+    color: #0c0c0c;
+  }
+}
+

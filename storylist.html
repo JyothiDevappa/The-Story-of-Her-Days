@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Playlist of Her Days</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Dancing Script', cursive;
+      background-color: lavender;
+      color: #35032d;
+      margin: 0;
+      padding: 20px;
+      background-image: url(assets/images/playlist.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 35px;
+      margin-left: 190px;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .story-list {
+      width: 30%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: 250px;
+      text-align: center;
+
+    }
+
+    .story-list a {
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 15px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #5a3e76;
+      font-size: 13px;
+      transition: background 0.3s;
+    }
+
+    .story-list a:hover {
+      background-color: #ead2ff;
+    }
+
+    .button-container {
+      position: fixed;
+      bottom: 20px;
+      left: 30px;
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 60px);
+      flex-wrap: wrap;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .nav-button {
+      background-color: #b28dcf;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .nav-button:hover {
+      background-color: #9f75c3;
+    }
+
+    /* Mobile Styles */
+    @media screen and (max-width: 768px) {
+  body {
+    background: url('assets/images/download.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .story-list {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .story-list a {
+    font-size: 16px;
+    padding: 12px 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .button-container {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .nav-button {
+    padding: 8px 12px;
+    font-size: 13px;
+    width: 40%;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>List of Her Days</h1>
+
+  <div class="story-list">
+    <a href="tittles/t1.html">Morning Vibes</a>
+    <a href="tittles/t2.html">Tea and Thoughts</a>
+    <a href="tittles/t3.html">Rainy Days</a>
+    <a href="tittles/t4.html">Nothing’s New</a>
+    <a href="tittles/t5.html">A Story of Us</a>
+    <a href="tittles/t6.html">Fun World</a>
+    <a href="tittles/t7.html">I Started Again</a>
+    <a href="tittles/t8.html">Set Boundaries</a>
+    <a href="tittles/t9.html">Now I Know How It Feels</a>
+  </div>
+
+  <div class="button-container">
+    <button class="nav-button" onclick="location.href='index.html'">← Previous Page</button>
+    <button class="nav-button" onclick="location.href='tittles/t1.html'">Next Page →</button>
+  </div>
+
+</body>
+</html>
